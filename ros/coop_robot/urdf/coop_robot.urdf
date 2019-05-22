@@ -1,0 +1,312 @@
+<robot
+  name="coop_robot">
+  <link
+    name="link_00">
+    <inertial>
+      <origin
+        xyz="-0.0023271 -0.014441 0.023123"
+        rpy="0 0 0" />
+      <mass
+        value="1.3431" />
+      <inertia
+        ixx="0.0057456"
+        ixy="-0.00020025"
+        ixz="5.6132E-05"
+        iyy="0.0046709"
+        iyz="0.00042835"
+        izz="0.0091733" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://coop_robot/meshes/link_00.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://coop_robot/meshes/link_00.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_01">
+    <inertial>
+      <origin
+        xyz="-0.0045838 -0.0037478 0.086733"
+        rpy="0 0 0" />
+      <mass
+        value="1.8146" />
+      <inertia
+        ixx="0.0099497"
+        ixy="-0.00038717"
+        ixz="0.00032994"
+        iyy="0.0083348"
+        iyz="0.00028475"
+        izz="0.0056515" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://coop_robot/meshes/link_01.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://coop_robot/meshes/link_01.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_01"
+    type="revolute">
+    <origin
+      xyz="0 0 0.067"
+      rpy="-3.9479E-49 0 0" />
+    <parent
+      link="link_00" />
+    <child
+      link="link_01" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="0" velocity="0.1" lower="-1.6" upper="1.6"/>
+  </joint>
+  <link
+    name="link_02">
+    <inertial>
+      <origin
+        xyz="-0.0087922 0.1007 0.0028096"
+        rpy="0 0 0" />
+      <mass
+        value="0.97328" />
+      <inertia
+        ixx="0.0049603"
+        ixy="0.00023072"
+        ixz="8.39E-05"
+        iyy="0.0010337"
+        iyz="0.00010422"
+        izz="0.0052056" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://coop_robot/meshes/link_02.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://coop_robot/meshes/link_02.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_02"
+    type="revolute">
+    <origin
+      xyz="0 0.004 0.15"
+      rpy="1.5708 6.8423E-48 0" />
+    <parent
+      link="link_01" />
+    <child
+      link="link_02" />
+    <axis
+      xyz="0 0 -1" />
+    <limit effort="0" velocity="0.1" lower="0" upper="1.6"/>
+  </joint>
+  <link
+    name="link_03">
+    <inertial>
+      <origin
+        xyz="-0.010146 0.072167 -0.0024895"
+        rpy="0 0 0" />
+      <mass
+        value="0.59881" />
+      <inertia
+        ixx="0.0032746"
+        ixy="0.00043152"
+        ixz="-0.00015625"
+        iyy="0.00070874"
+        iyz="0.00027145"
+        izz="0.0035174" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://coop_robot/meshes/link_03.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://coop_robot/meshes/link_03.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_03"
+    type="revolute">
+    <origin
+      xyz="0 0.15 -0.044"
+      rpy="3.9479E-49 0 0" />
+    <parent
+      link="link_02" />
+    <child
+      link="link_03" />
+    <axis
+      xyz="0 0 -1" />
+    <limit effort="0" velocity="0.1" lower="0" upper="1.6"/>
+  </joint>
+  <link
+    name="link_04">
+    <inertial>
+      <origin
+        xyz="0.00093468 0.033853 0.033404"
+        rpy="0 0 0" />
+      <mass
+        value="0.091248" />
+      <inertia
+        ixx="0.00028862"
+        ixy="6.2938E-06"
+        ixz="6.6376E-07"
+        iyy="2.3828E-05"
+        iyz="-1.5879E-05"
+        izz="0.00029741" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://coop_robot/meshes/link_04.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://coop_robot/meshes/link_04.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_04"
+    type="revolute">
+    <origin
+      xyz="0 0.14 0"
+      rpy="3.9479E-49 0 0" />
+    <parent
+      link="link_03" />
+    <child
+      link="link_04" />
+    <axis
+      xyz="0 0 -1" />
+    <limit effort="0" velocity="0.1" lower="0" upper="1.6"/>
+  </joint>
+  <link
+    name="link_05">
+    <inertial>
+      <origin
+        xyz="-5.9985E-11 -0.050802 -0.0033648"
+        rpy="0 0 0" />
+      <mass
+        value="0.022612" />
+      <inertia
+        ixx="1.1224E-05"
+        ixy="4.0657E-14"
+        ixz="4.7561E-15"
+        iyy="2.5217E-06"
+        iyz="7.9297E-07"
+        izz="1.057E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://coop_robot/meshes/link_05.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://coop_robot/meshes/link_05.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="end_effector"
+    type="fixed">
+    <origin
+      xyz="0 0.188 0.0602"
+      rpy="3.9479E-49 0 0" />
+    <parent
+      link="link_04" />
+    <child
+      link="link_05" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
