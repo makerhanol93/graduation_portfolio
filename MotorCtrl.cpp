@@ -43,11 +43,11 @@ void MotorCtrl::Go_Motor(int MPWM_PIN,int DIRECTION_PIN, double MPWM)
 
     if(MPWM <= 0)
     {
-      digitalWrite(DIRECTION_PIN, HIGH); //CCW
+      digitalWrite(DIRECTION_PIN, HIGH);
     }
     else
     {
-      digitalWrite(DIRECTION_PIN, LOW); //CCW
+      digitalWrite(DIRECTION_PIN, LOW);
     }
 
     analogWrite(MPWM_PIN,abs(MPWM));
